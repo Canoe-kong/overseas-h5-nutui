@@ -1304,10 +1304,10 @@
   resolved "https://registry.yarnpkg.com/@nutui/icons-react-taro/-/icons-react-taro-1.0.5.tgz#c0bbe6ef54bad06adeb8a17448cfcf45c6798bcb"
   integrity sha512-p7dCW29wASH/qQ1OaUGGKA6PRV33wDPb80+qrHnWtT40syIb0W+e92mpplbULWM01s+GYVGyUU3i8b7Iy7qfvw==
 
-"@nutui/nutui-react-taro@2.6.16":
-  version "2.6.16"
-  resolved "https://registry.yarnpkg.com/@nutui/nutui-react-taro/-/nutui-react-taro-2.6.16.tgz#85656cbdd017050e221e499c930e435eeeaed1ae"
-  integrity sha512-edVC3dGlmNc/Fm3JQgdmwD3kTYGns5p3fYYbQ+hOh+MbnH29pgZcsPWm14z1EQkn4b0lUC04IiWe1hVUfZK3cw==
+"@nutui/nutui-react-taro@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@nutui/nutui-react-taro/-/nutui-react-taro-2.6.0.tgz#508fe7543ec2735c7b7e6e423f5a2e65ad31363a"
+  integrity sha512-yXE7vAG/kOgfAcyYoHQUSSfb9rF9dgNAlIf1tajdGIjFKG9HvoVRIcouY2lhTEGletsB7b9OhyAibRqr9JmsXg==
   dependencies:
     "@babel/runtime" "^7.23.9"
     "@nutui/icons-react-taro" "^1.0.4"
