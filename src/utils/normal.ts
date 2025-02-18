@@ -1,3 +1,4 @@
+import i18n from 'taro-i18n';
 /**
  * 将对象转为query
  * @param {Object} query
@@ -11,4 +12,11 @@ export const stringifyQuery = query => {
   } catch (err) {
     return '';
   }
+};
+
+/**
+ * 多语言转化
+ */
+export const intl = (key: string, value?: any) => {
+  return i18n.t._(key, value);
 };

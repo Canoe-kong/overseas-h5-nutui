@@ -12347,6 +12347,11 @@ taro-css-to-react-native@3.5.0:
     css-mediaquery "^0.1.2"
     postcss-value-parser "^3.3.0"
 
+taro-i18n@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/taro-i18n/-/taro-i18n-1.0.3.tgz#e23f56e207ca97a45dab6244f5c8eec9b28e2075"
+  integrity sha512-Fw1LrZlpJTVXmhV7Hbg3x/Jesgw3+2i5wavaA1XfGptaLYxI5KKjHwJnMHT/D6376uv6QjZFgZ2LGQAINK0+0Q==
+
 term-size@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"

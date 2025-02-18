@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { View } from '@tarojs/components';
 import styles from './index.module.less';
 import classNames from 'classnames';
+import utils from '@/utils';
 class Index extends Component {
   render() {
     return (
@@ -10,7 +11,9 @@ class Index extends Component {
           <View className="titleName"></View>
           {
             <View className="changeLangBox flex-align-spacebetween">
-              <View className="changeText color-theme margin-right10">切换至</View>
+              <View className="changeText color-theme margin-right10">
+                {utils.intl('changeTo')}
+              </View>
               <View className="flex-align changeBtn">
                 {/* <ChangeLanguage changeSuccessCallBack={this.changeSuccessCallBack.bind(this)} /> */}
                 {/* <AtIcon value="chevron-down" size="20"></AtIcon> */}
