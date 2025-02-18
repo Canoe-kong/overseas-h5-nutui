@@ -1,4 +1,18 @@
 const path = require('path');
+const H5_ENV = {
+  test: 'fat',
+  production: 'prod',
+  pre: 'pre'
+};
+const outputRootStrtegy = {
+  h5: `h5/${H5_ENV[process.env.MODE]}`,
+  weapp: 'weapp',
+  alipay: 'alipay',
+  swan: 'swan',
+  ['undefined']: 'dist'
+};
+const env = JSON.parse(process.env.npm_config_argv)['cooked'][1].split(':')[1];
+const outputRoot = outputRootStrtegy[env];
 const config = {
   projectName: 'overseas-h5-nutui',
   date: '2025-2-17',
@@ -10,15 +24,12 @@ const config = {
     375: 2 / 1
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${outputRoot}`,
   plugins: ['@tarojs/plugin-html'],
-  defineConstants: {
-  },
+  defineConstants: {},
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   compiler: 'webpack5',
@@ -31,7 +42,7 @@ const config = {
     '@components': path.resolve(__dirname, '..', 'src/components'),
     '@assets': path.resolve(__dirname, '..', 'src/assets'),
     '@images': path.resolve(__dirname, '..', 'src/assets/images'),
-    '@utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@utils': path.resolve(__dirname, '..', 'src/utils')
   },
   sass: {
     data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`
@@ -72,8 +83,7 @@ const config = {
       },
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -83,12 +93,15 @@ const config = {
         }
       }
     }
+    // router: {
+    //   mode: 'browser'
+    // }
   }
-}
+};
 
-module.exports = function (merge) {
+module.exports = function(merge) {
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require('./prod'));
+};

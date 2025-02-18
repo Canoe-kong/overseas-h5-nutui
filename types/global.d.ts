@@ -11,6 +11,11 @@ declare module '*.scss';
 declare module '*.sass';
 declare module '*.styl';
 
+declare module '*.module.less' {
+  const classes: { [key: string]: string };
+  export default classes;
+}
+
 declare namespace NodeJS {
   interface ProcessEnv {
     TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd'
